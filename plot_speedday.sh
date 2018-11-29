@@ -2,7 +2,7 @@
 set terminal svg font "Verdana,10"    #output format of graph
 set term svg enhanced size 1000,800    #resolution
 set font 'Verdana,14'
-set output "/dockerhost/speedtest/speedday.svg"    #name of output file
+set output "speedday.svg"    #name of output file
 set style data points
 set ylabel "Mbit/s"    #vertical axis name
 set yrange [0:130]    #vertical axis range (optional line)
@@ -21,5 +21,5 @@ set ytics -10,10 font 'Verdana,12'
 set xtics 0,7200 font 'Verdana,12'  #rotate by 0 right
 set datafile separator ','
 
-plot "/dockerhost/speedtest/speedtest.csv" using 1:3 title "Download" axes x1y1 with lines lc rgb '#00ccff' lt 1 lw 2, \
-     "/dockerhost/speedtest/speedtest.csv" using 1:4 title "Upload" axes x1y1 with lines lc rgb '#ee00ee' lt 1 lw 2
+plot "speedtest.csv" using 1:3 title "Download" axes x1y1 with lines lc rgb '#00ccff' lt 1 lw 2, \
+     "speedtest.csv" using 1:4 title "Upload" axes x1y1 with lines lc rgb '#ee00ee' lt 1 lw 2
